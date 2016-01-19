@@ -1,6 +1,6 @@
 FROM drupal:8
 
-RUN apt-get update && apt-get install -y git sqlite mysql-client wget sendmail && \
+RUN apt-get update && apt-get install -y git sqlite mysql-client wget && \
     rm -rf /var/lib/apt/lists/*
 
 RUN \
@@ -20,4 +20,4 @@ RUN echo date.timezone=Europe/Rome >> /usr/local/etc/php/conf.d/timezone.ini
 EXPOSE 80 443 25
 
 
-CMD service sendmail start && apache2 -D FOREGROUND
+CMD apache2 -D FOREGROUND
