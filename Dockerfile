@@ -9,6 +9,10 @@ mv composer.phar /usr/local/bin/composer && \
 ln -s /usr/local/bin/composer /usr/bin/composer && \
 composer global require drush/drush:dev-master
 
+RUN echo '
+export PATH="$HOME/.composer/vendor/bin:$PATH"
+' > ~/.bashrc
+
 
 RUN pecl install uploadprogress
 RUN echo "extension=uploadprogress.so" >> /usr/local/etc/php/conf.d/uploadprogress.ini
