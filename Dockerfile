@@ -1,5 +1,5 @@
 FROM drupal:8
-MANTEINER Lodato Luciano
+MAINTAINER Lodato Luciano <lodato.luciano@gmail.com>
 RUN apt-get update && apt-get install -y sqlite mysql-client wget git && \
     rm -rf /var/lib/apt/lists/*
 
