@@ -1,2 +1,5 @@
-# docker_drupal8_drush
-This container add drush to standard drupal8 container
+# drupal8 + drush
+This container add drush to standard drupal8 container.
+
+It is powered by php 7
+
